@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<JUCERPROJECT id="cIptee" name="SfizzJuceNG" projectType="audioplug" jucerVersion="5.4.7"
+              projectLineFeed="&#10;" companyName="atsushieno" companyCopyright="(C)2020 atsushieno"
+              companyWebsite="https://github.com/atsushieno" pluginFormats="buildAU,buildAUv3,buildStandalone,buildVST,buildVST3"
+              pluginCharacteristicsValue="pluginEditorRequiresKeys,pluginIsSynth,pluginWantsMidiIn"
+              pluginName="sfizz-juce-ng" pluginDesc="sfizz-juce-ng" pluginAUMainType="'augn'"
+              pluginVST3Category="Generator,Instrument,Synth" pluginVSTCategory="kPlugCategSynth"
+              cppLanguageStandard="17">
+  <MAINGROUP id="E8ydcQ" name="SfizzJuceNG">
+    <GROUP id="{2482D053-10D7-D30E-A9CC-60CB3437465C}" name="Source">
+      <GROUP id="{08B33F7A-A3DF-0549-1545-877B0073C075}" name="abseil-cpp">
+        <GROUP id="{844FE155-1C18-E405-C3B9-5366CC0117D6}" name="numeric">
+          <FILE id="EGbyXB" name="int128.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/numeric/int128.cc"/>
+          <FILE id="FC4SiD" name="int128.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/numeric/int128.h"/>
+          <FILE id="N39G5a" name="int128_have_intrinsic.inc" compile="0" resource="1"
+                file="sfizz/external/abseil-cpp/absl/numeric/int128_have_intrinsic.inc"/>
+          <FILE id="Ov842A" name="int128_no_intrinsic.inc" compile="0" resource="1"
+                file="sfizz/external/abseil-cpp/absl/numeric/int128_no_intrinsic.inc"/>
+        </GROUP>
+        <GROUP id="{3894D568-6059-11E4-1F91-AFD67CE15627}" name="time">
+          <FILE id="xrweQD" name="civil_time.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/time/civil_time.cc"/>
+          <FILE id="ttmef3" name="civil_time.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/time/civil_time.h"/>
+          <FILE id="IcrPh8" name="civil_time_detail.cc" compile="1" resource="0"
+                file="sfizz/external/abseil-cpp/absl/time/internal/cctz/src/civil_time_detail.cc"/>
+          <FILE id="UeFmBG" name="civil_time_test.cc" compile="1" resource="0"
+                file="sfizz/external/abseil-cpp/absl/time/internal/cctz/src/civil_time_test.cc"/>
+          <FILE id="s59gYI" name="clock.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/time/clock.cc"/>
+          <FILE id="n0pXxN" name="clock.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/time/clock.h"/>
+          <FILE id="LoN8WK" name="duration.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/time/duration.cc"/>
+          <FILE id="dmxCCu" name="format.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/time/format.cc"/>
+          <FILE id="NuW3TV" name="get_current_time_chrono.inc" compile="0" resource="1"
+                file="sfizz/external/abseil-cpp/absl/time/internal/get_current_time_chrono.inc"/>
+          <FILE id="AnhEQu" name="get_current_time_posix.inc" compile="0" resource="1"
+                file="sfizz/external/abseil-cpp/absl/time/internal/get_current_time_posix.inc"/>
+          <FILE id="jyp5LO" name="time.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/time/time.cc"/>
+          <FILE id="xEOfeq" name="time.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/time/time.h"/>
+          <FILE id="nYqeBV" name="time_zone_fixed.cc" compile="1" resource="0"
+                file="sfizz/external/abseil-cpp/absl/time/internal/cctz/src/time_zone_fixed.cc"/>
+          <FILE id="wCfSEp" name="time_zone_fixed.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/time/internal/cctz/src/time_zone_fixed.h"/>
+          <FILE id="UBSc2O" name="time_zone_format.cc" compile="1" resource="0"
+                file="sfizz/external/abseil-cpp/absl/time/internal/cctz/src/time_zone_format.cc"/>
+          <FILE id="nOGGVN" name="time_zone_if.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/time/internal/cctz/src/time_zone_if.cc"/>
+          <FILE id="nGI8M4" name="time_zone_if.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/time/internal/cctz/src/time_zone_if.h"/>
+          <FILE id="CjFjST" name="time_zone_impl.cc" compile="1" resource="0"
+                file="sfizz/external/abseil-cpp/absl/time/internal/cctz/src/time_zone_impl.cc"/>
+          <FILE id="Z1rVVK" name="time_zone_impl.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/time/internal/cctz/src/time_zone_impl.h"/>
+          <FILE id="MTRMsy" name="time_zone_info.cc" compile="1" resource="0"
+                file="sfizz/external/abseil-cpp/absl/time/internal/cctz/src/time_zone_info.cc"/>
+          <FILE id="bfl5x8" name="time_zone_info.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/time/internal/cctz/src/time_zone_info.h"/>
+          <FILE id="amiPz4" name="time_zone_libc.cc" compile="1" resource="0"
+                file="sfizz/external/abseil-cpp/absl/time/internal/cctz/src/time_zone_libc.cc"/>
+          <FILE id="Flk5Gf" name="time_zone_libc.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/time/internal/cctz/src/time_zone_libc.h"/>
+          <FILE id="tUYqWi" name="time_zone_lookup.cc" compile="1" resource="0"
+                file="sfizz/external/abseil-cpp/absl/time/internal/cctz/src/time_zone_lookup.cc"/>
+          <FILE id="BzCSoW" name="time_zone_posix.cc" compile="1" resource="0"
+                file="sfizz/external/abseil-cpp/absl/time/internal/cctz/src/time_zone_posix.cc"/>
+          <FILE id="M2fbr1" name="time_zone_posix.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/time/internal/cctz/src/time_zone_posix.h"/>
+          <FILE id="dYHrpn" name="tzfile.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/time/internal/cctz/src/tzfile.h"/>
+          <FILE id="nhp2ar" name="zone_info_source.cc" compile="1" resource="0"
+                file="sfizz/external/abseil-cpp/absl/time/internal/cctz/src/zone_info_source.cc"/>
+          <FILE id="fEwd9I" name="zoneinfo.inc" compile="0" resource="1" file="sfizz/external/abseil-cpp/absl/time/internal/zoneinfo.inc"/>
+        </GROUP>
+        <GROUP id="{3D5A12A6-0935-7C15-BEF6-86C1B0597922}" name="debugging">
+          <FILE id="dxg4lh" name="address_is_readable.cc" compile="1" resource="0"
+                file="sfizz/external/abseil-cpp/absl/debugging/internal/address_is_readable.cc"/>
+          <FILE id="sNp8Ke" name="address_is_readable.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/debugging/internal/address_is_readable.h"/>
+          <FILE id="xvfQ9s" name="demangle.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/debugging/internal/demangle.cc"/>
+          <FILE id="BfYypV" name="demangle.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/debugging/internal/demangle.h"/>
+          <FILE id="oMpgGX" name="elf_mem_image.cc" compile="1" resource="0"
+                file="sfizz/external/abseil-cpp/absl/debugging/internal/elf_mem_image.cc"/>
+          <FILE id="g8O7km" name="elf_mem_image.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/debugging/internal/elf_mem_image.h"/>
+          <FILE id="ni3FkM" name="examine_stack.cc" compile="1" resource="0"
+                file="sfizz/external/abseil-cpp/absl/debugging/internal/examine_stack.cc"/>
+          <FILE id="KOtEyh" name="examine_stack.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/debugging/internal/examine_stack.h"/>
+          <FILE id="XJ0bLk" name="failure_signal_handler.cc" compile="1" resource="0"
+                file="sfizz/external/abseil-cpp/absl/debugging/failure_signal_handler.cc"/>
+          <FILE id="lNxrPN" name="failure_signal_handler.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/debugging/failure_signal_handler.h"/>
+          <FILE id="sCp421" name="leak_check.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/debugging/leak_check.cc"/>
+          <FILE id="VdYHE9" name="leak_check.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/debugging/leak_check.h"/>
+          <FILE id="BjmMIQ" name="leak_check_disable.cc" compile="1" resource="0"
+                file="sfizz/external/abseil-cpp/absl/debugging/leak_check_disable.cc"/>
+          <FILE id="J31hwL" name="stack_consumption.cc" compile="1" resource="0"
+                file="sfizz/external/abseil-cpp/absl/debugging/internal/stack_consumption.cc"/>
+          <FILE id="eQ2rvF" name="stack_consumption.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/debugging/internal/stack_consumption.h"/>
+          <FILE id="B14kFd" name="stacktrace.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/debugging/stacktrace.cc"/>
+          <FILE id="n5wofC" name="stacktrace.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/debugging/stacktrace.h"/>
+          <FILE id="GiUoCZ" name="stacktrace_aarch64-inl.inc" compile="0" resource="1"
+                file="sfizz/external/abseil-cpp/absl/debugging/internal/stacktrace_aarch64-inl.inc"/>
+          <FILE id="Eh4RSk" name="stacktrace_arm-inl.inc" compile="0" resource="1"
+                file="sfizz/external/abseil-cpp/absl/debugging/internal/stacktrace_arm-inl.inc"/>
+          <FILE id="Ze9qST" name="stacktrace_config.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/debugging/internal/stacktrace_config.h"/>
+          <FILE id="blStde" name="stacktrace_generic-inl.inc" compile="0" resource="1"
+                file="sfizz/external/abseil-cpp/absl/debugging/internal/stacktrace_generic-inl.inc"/>
+          <FILE id="fArkHB" name="stacktrace_powerpc-inl.inc" compile="0" resource="1"
+                file="sfizz/external/abseil-cpp/absl/debugging/internal/stacktrace_powerpc-inl.inc"/>
+          <FILE id="N0xjXI" name="stacktrace_unimplemented-inl.inc" compile="0"
+                resource="1" file="sfizz/external/abseil-cpp/absl/debugging/internal/stacktrace_unimplemented-inl.inc"/>
+          <FILE id="GrXn8b" name="stacktrace_win32-inl.inc" compile="0" resource="1"
+                file="sfizz/external/abseil-cpp/absl/debugging/internal/stacktrace_win32-inl.inc"/>
+          <FILE id="qXjK5y" name="stacktrace_x86-inl.inc" compile="0" resource="1"
+                file="sfizz/external/abseil-cpp/absl/debugging/internal/stacktrace_x86-inl.inc"/>
+          <FILE id="EScZKq" name="symbolize.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/debugging/symbolize.cc"/>
+          <FILE id="Q8TuVC" name="symbolize.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/debugging/internal/symbolize.h"/>
+          <FILE id="XD016h" name="symbolize.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/debugging/symbolize.h"/>
+          <FILE id="fH2k6N" name="symbolize_elf.inc" compile="0" resource="1"
+                file="sfizz/external/abseil-cpp/absl/debugging/symbolize_elf.inc"/>
+          <FILE id="mKhEz2" name="symbolize_unimplemented.inc" compile="0" resource="1"
+                file="sfizz/external/abseil-cpp/absl/debugging/symbolize_unimplemented.inc"/>
+          <FILE id="nvloB1" name="symbolize_win32.inc" compile="0" resource="1"
+                file="sfizz/external/abseil-cpp/absl/debugging/symbolize_win32.inc"/>
+          <FILE id="UtTVIP" name="vdso_support.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/debugging/internal/vdso_support.cc"/>
+          <FILE id="WBYNgo" name="vdso_support.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/debugging/internal/vdso_support.h"/>
+        </GROUP>
+        <GROUP id="{6541BA8A-7928-A6C0-71C1-C5D858846C20}" name="synchronization">
+          <FILE id="QN0M5u" name="barrier.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/synchronization/barrier.cc"/>
+          <FILE id="JcpLMA" name="barrier.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/synchronization/barrier.h"/>
+          <FILE id="nfiyux" name="blocking_counter.cc" compile="1" resource="0"
+                file="sfizz/external/abseil-cpp/absl/synchronization/blocking_counter.cc"/>
+          <FILE id="SHypOa" name="blocking_counter.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/synchronization/blocking_counter.h"/>
+          <FILE id="atR2QZ" name="BUILD.bazel" compile="0" resource="1" file="sfizz/external/abseil-cpp/absl/synchronization/BUILD.bazel"/>
+          <FILE id="YMxkA4" name="CMakeLists.txt" compile="0" resource="1" file="sfizz/external/abseil-cpp/absl/synchronization/CMakeLists.txt"/>
+          <FILE id="cSA7Ec" name="create_thread_identity.cc" compile="1" resource="0"
+                file="sfizz/external/abseil-cpp/absl/synchronization/internal/create_thread_identity.cc"/>
+          <FILE id="n4k5AL" name="create_thread_identity.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/synchronization/internal/create_thread_identity.h"/>
+          <FILE id="mSGGKJ" name="graphcycles.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/synchronization/internal/graphcycles.cc"/>
+          <FILE id="tWDXch" name="graphcycles.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/synchronization/internal/graphcycles.h"/>
+          <FILE id="RWHOfj" name="kernel_timeout.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/synchronization/internal/kernel_timeout.h"/>
+          <FILE id="IttMTb" name="mutex.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/synchronization/mutex.cc"/>
+          <FILE id="AMyy5P" name="mutex.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/synchronization/mutex.h"/>
+          <FILE id="mTEmad" name="notification.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/synchronization/notification.cc"/>
+          <FILE id="V8rqPj" name="notification.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/synchronization/notification.h"/>
+          <FILE id="rvY1cF" name="per_thread_sem.cc" compile="1" resource="0"
+                file="sfizz/external/abseil-cpp/absl/synchronization/internal/per_thread_sem.cc"/>
+          <FILE id="g79MP1" name="per_thread_sem.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/synchronization/internal/per_thread_sem.h"/>
+          <FILE id="okHYEb" name="thread_pool.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/synchronization/internal/thread_pool.h"/>
+          <FILE id="fS8BQu" name="waiter.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/synchronization/internal/waiter.cc"/>
+          <FILE id="XZqua0" name="waiter.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/synchronization/internal/waiter.h"/>
+        </GROUP>
+        <GROUP id="{B5E4E162-CD69-E8EB-4E20-24D4DFB96A71}" name="container">
+          <FILE id="qVIVzJ" name="btree.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/container/internal/btree.h"/>
+          <FILE id="tH96rt" name="btree_container.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/container/internal/btree_container.h"/>
+          <FILE id="s9VqHI" name="btree_map.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/container/btree_map.h"/>
+          <FILE id="XfvjLa" name="btree_set.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/container/btree_set.h"/>
+          <FILE id="Kc4lE5" name="common.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/container/internal/common.h"/>
+          <FILE id="h7slUm" name="compressed_tuple.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/container/internal/compressed_tuple.h"/>
+          <FILE id="N1Qve4" name="container_memory.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/container/internal/container_memory.h"/>
+          <FILE id="LNjIBm" name="counting_allocator.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/container/internal/counting_allocator.h"/>
+          <FILE id="eWNGOL" name="fixed_array.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/container/fixed_array.h"/>
+          <FILE id="UPdVjh" name="flat_hash_map.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/container/flat_hash_map.h"/>
+          <FILE id="Ijd3gz" name="flat_hash_set.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/container/flat_hash_set.h"/>
+          <FILE id="hkUq2M" name="hash_function_defaults.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/container/internal/hash_function_defaults.h"/>
+          <FILE id="rYCl2d" name="hash_generator_testing.cc" compile="1" resource="0"
+                file="sfizz/external/abseil-cpp/absl/container/internal/hash_generator_testing.cc"/>
+          <FILE id="ccU9DT" name="hash_generator_testing.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/container/internal/hash_generator_testing.h"/>
+          <FILE id="vPTGs2" name="hash_policy_testing.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/container/internal/hash_policy_testing.h"/>
+          <FILE id="czbuQi" name="hash_policy_traits.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/container/internal/hash_policy_traits.h"/>
+          <FILE id="yGpAue" name="hashtable_debug.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/container/internal/hashtable_debug.h"/>
+          <FILE id="QhAzbW" name="hashtable_debug_hooks.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/container/internal/hashtable_debug_hooks.h"/>
+          <FILE id="aU6DBV" name="hashtablez_sampler.cc" compile="1" resource="0"
+                file="sfizz/external/abseil-cpp/absl/container/internal/hashtablez_sampler.cc"/>
+          <FILE id="EZbzeN" name="hashtablez_sampler.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/container/internal/hashtablez_sampler.h"/>
+          <FILE id="fSjAOH" name="hashtablez_sampler_force_weak_definition.cc"
+                compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/container/internal/hashtablez_sampler_force_weak_definition.cc"/>
+          <FILE id="z4SsqX" name="have_sse.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/container/internal/have_sse.h"/>
+          <FILE id="zUQ73p" name="inlined_vector.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/container/internal/inlined_vector.h"/>
+          <FILE id="FRAiHS" name="inlined_vector.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/container/inlined_vector.h"/>
+          <FILE id="JAAWmU" name="layout.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/container/internal/layout.h"/>
+          <FILE id="Hd11Uu" name="node_hash_map.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/container/node_hash_map.h"/>
+          <FILE id="gBpTlE" name="node_hash_policy.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/container/internal/node_hash_policy.h"/>
+          <FILE id="yUhmgS" name="node_hash_set.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/container/node_hash_set.h"/>
+          <FILE id="UtvyBA" name="raw_hash_map.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/container/internal/raw_hash_map.h"/>
+          <FILE id="oslCKB" name="raw_hash_set.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/container/internal/raw_hash_set.cc"/>
+          <FILE id="OhIo09" name="raw_hash_set.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/container/internal/raw_hash_set.h"/>
+          <FILE id="wgCJXC" name="test_instance_tracker.cc" compile="1" resource="0"
+                file="sfizz/external/abseil-cpp/absl/container/internal/test_instance_tracker.cc"/>
+          <FILE id="YyoP6g" name="test_instance_tracker.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/container/internal/test_instance_tracker.h"/>
+          <FILE id="IGcoz4" name="tracked.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/container/internal/tracked.h"/>
+        </GROUP>
+        <GROUP id="{66C6F4AF-3B1D-8229-E13B-91C7E3956D36}" name="hash">
+          <FILE id="a7wGZ8" name="city.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/hash/internal/city.cc"/>
+          <FILE id="eYWboU" name="city.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/hash/internal/city.h"/>
+          <FILE id="piRX8v" name="hash.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/hash/internal/hash.cc"/>
+          <FILE id="MDoe21" name="hash.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/hash/internal/hash.h"/>
+          <FILE id="OzhpBh" name="hash.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/hash/hash.h"/>
+          <FILE id="HxFfsq" name="print_hash_of.cc" compile="1" resource="0"
+                file="sfizz/external/abseil-cpp/absl/hash/internal/print_hash_of.cc"/>
+          <FILE id="AM5bRo" name="spy_hash_state.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/hash/internal/spy_hash_state.h"/>
+        </GROUP>
+        <GROUP id="{B6B6EFD8-11B0-3866-6916-AA837D3E3576}" name="base">
+          <FILE id="anXPMy" name="atomic_hook.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/base/internal/atomic_hook.h"/>
+          <FILE id="x4Epo7" name="attributes.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/base/attributes.h"/>
+          <FILE id="vpejXd" name="bits.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/base/internal/bits.h"/>
+          <FILE id="eDHLNC" name="call_once.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/base/call_once.h"/>
+          <FILE id="SQct5Y" name="casts.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/base/casts.h"/>
+          <FILE id="rMdYkB" name="config.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/base/config.h"/>
+          <FILE id="G2jE21" name="const_init.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/base/const_init.h"/>
+          <FILE id="z7FBZc" name="cycleclock.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/base/internal/cycleclock.cc"/>
+          <FILE id="QiLm6O" name="cycleclock.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/base/internal/cycleclock.h"/>
+          <FILE id="JENLuz" name="direct_mmap.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/base/internal/direct_mmap.h"/>
+          <FILE id="DBdSB0" name="dynamic_annotations.cc" compile="1" resource="0"
+                file="sfizz/external/abseil-cpp/absl/base/dynamic_annotations.cc"/>
+          <FILE id="EkbhdC" name="dynamic_annotations.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/base/dynamic_annotations.h"/>
+          <FILE id="CSXuRS" name="endian.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/base/internal/endian.h"/>
+          <FILE id="p50j1s" name="exponential_biased.cc" compile="1" resource="0"
+                file="sfizz/external/abseil-cpp/absl/base/internal/exponential_biased.cc"/>
+          <FILE id="dQDfKP" name="exponential_biased.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/base/internal/exponential_biased.h"/>
+          <FILE id="RdLCRD" name="hide_ptr.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/base/internal/hide_ptr.h"/>
+          <FILE id="sXQFb4" name="identity.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/base/internal/identity.h"/>
+          <FILE id="TNpoC8" name="inline_variable.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/base/internal/inline_variable.h"/>
+          <FILE id="Zb5qyz" name="invoke.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/base/internal/invoke.h"/>
+          <FILE id="cqVesI" name="log_severity.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/base/log_severity.cc"/>
+          <FILE id="Z7tnmE" name="log_severity.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/base/log_severity.h"/>
+          <FILE id="ddh1ac" name="low_level_alloc.cc" compile="1" resource="0"
+                file="sfizz/external/abseil-cpp/absl/base/internal/low_level_alloc.cc"/>
+          <FILE id="L1T2nL" name="low_level_alloc.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/base/internal/low_level_alloc.h"/>
+          <FILE id="kxPBiR" name="low_level_scheduling.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/base/internal/low_level_scheduling.h"/>
+          <FILE id="TV7pdT" name="macros.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/base/macros.h"/>
+          <FILE id="nIsxSX" name="optimization.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/base/optimization.h"/>
+          <FILE id="tpzk5R" name="options.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/base/options.h"/>
+          <FILE id="ZzzpU1" name="per_thread_tls.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/base/internal/per_thread_tls.h"/>
+          <FILE id="I9ahdw" name="periodic_sampler.cc" compile="1" resource="0"
+                file="sfizz/external/abseil-cpp/absl/base/internal/periodic_sampler.cc"/>
+          <FILE id="P1foIq" name="periodic_sampler.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/base/internal/periodic_sampler.h"/>
+          <FILE id="D7SKwq" name="policy_checks.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/base/policy_checks.h"/>
+          <FILE id="qq4Dgs" name="port.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/base/port.h"/>
+          <FILE id="Tw7cVP" name="pretty_function.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/base/internal/pretty_function.h"/>
+          <FILE id="tmCiVC" name="raw_logging.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/base/internal/raw_logging.cc"/>
+          <FILE id="ZMn623" name="raw_logging.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/base/internal/raw_logging.h"/>
+          <FILE id="D41tMO" name="scheduling_mode.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/base/internal/scheduling_mode.h"/>
+          <FILE id="fsA4Lh" name="scoped_set_env.cc" compile="1" resource="0"
+                file="sfizz/external/abseil-cpp/absl/base/internal/scoped_set_env.cc"/>
+          <FILE id="Gtb3Wd" name="scoped_set_env.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/base/internal/scoped_set_env.h"/>
+          <FILE id="sQwfA1" name="spinlock.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/base/internal/spinlock.cc"/>
+          <FILE id="yxlF6r" name="spinlock.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/base/internal/spinlock.h"/>
+          <FILE id="zvzUCY" name="spinlock_akaros.inc" compile="0" resource="1"
+                file="sfizz/external/abseil-cpp/absl/base/internal/spinlock_akaros.inc"/>
+          <FILE id="QmHgup" name="spinlock_linux.inc" compile="0" resource="1"
+                file="sfizz/external/abseil-cpp/absl/base/internal/spinlock_linux.inc"/>
+          <FILE id="wFNBv2" name="spinlock_posix.inc" compile="0" resource="1"
+                file="sfizz/external/abseil-cpp/absl/base/internal/spinlock_posix.inc"/>
+          <FILE id="SFGLm8" name="spinlock_wait.cc" compile="1" resource="0"
+                file="sfizz/external/abseil-cpp/absl/base/internal/spinlock_wait.cc"/>
+          <FILE id="mRfYA5" name="spinlock_wait.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/base/internal/spinlock_wait.h"/>
+          <FILE id="D2O3kF" name="spinlock_win32.inc" compile="0" resource="1"
+                file="sfizz/external/abseil-cpp/absl/base/internal/spinlock_win32.inc"/>
+          <FILE id="DmiAvR" name="sysinfo.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/base/internal/sysinfo.cc"/>
+          <FILE id="LpxCtl" name="sysinfo.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/base/internal/sysinfo.h"/>
+          <FILE id="qqBzMp" name="thread_annotations.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/base/internal/thread_annotations.h"/>
+          <FILE id="PHBcSZ" name="thread_annotations.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/base/thread_annotations.h"/>
+          <FILE id="iTnTpP" name="thread_identity.cc" compile="1" resource="0"
+                file="sfizz/external/abseil-cpp/absl/base/internal/thread_identity.cc"/>
+          <FILE id="vaVBC9" name="thread_identity.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/base/internal/thread_identity.h"/>
+          <FILE id="V9hZNX" name="throw_delegate.cc" compile="1" resource="0"
+                file="sfizz/external/abseil-cpp/absl/base/internal/throw_delegate.cc"/>
+          <FILE id="ng125L" name="throw_delegate.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/base/internal/throw_delegate.h"/>
+          <FILE id="rQnWGC" name="tsan_mutex_interface.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/base/internal/tsan_mutex_interface.h"/>
+          <FILE id="cBKchU" name="unaligned_access.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/base/internal/unaligned_access.h"/>
+          <FILE id="GDc33P" name="unscaledcycleclock.cc" compile="1" resource="0"
+                file="sfizz/external/abseil-cpp/absl/base/internal/unscaledcycleclock.cc"/>
+          <FILE id="Vv3B87" name="unscaledcycleclock.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/base/internal/unscaledcycleclock.h"/>
+        </GROUP>
+        <GROUP id="{213AA082-43F3-CA98-4EA4-8E129C039377}" name="strings">
+          <FILE id="Ic6As8" name="arg.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/strings/internal/str_format/arg.cc"/>
+          <FILE id="hv1bBc" name="arg.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/strings/internal/str_format/arg.h"/>
+          <FILE id="l1q82T" name="arg_test.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/strings/internal/str_format/arg_test.cc"/>
+          <FILE id="uUvwvA" name="ascii.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/strings/ascii.cc"/>
+          <FILE id="AKOFxB" name="ascii.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/strings/ascii.h"/>
+          <FILE id="LVmS5w" name="bind.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/strings/internal/str_format/bind.cc"/>
+          <FILE id="f0XwXb" name="bind.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/strings/internal/str_format/bind.h"/>
+          <FILE id="JbnT3X" name="char_map.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/strings/internal/char_map.h"/>
+          <FILE id="KojDAL" name="charconv.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/strings/charconv.cc"/>
+          <FILE id="oE9bBj" name="charconv.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/strings/charconv.h"/>
+          <FILE id="G1wgHv" name="charconv_bigint.cc" compile="1" resource="0"
+                file="sfizz/external/abseil-cpp/absl/strings/internal/charconv_bigint.cc"/>
+          <FILE id="twcC0f" name="charconv_bigint.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/strings/internal/charconv_bigint.h"/>
+          <FILE id="sG4vTg" name="charconv_parse.cc" compile="1" resource="0"
+                file="sfizz/external/abseil-cpp/absl/strings/internal/charconv_parse.cc"/>
+          <FILE id="MGbKo0" name="charconv_parse.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/strings/internal/charconv_parse.h"/>
+          <FILE id="G7CHQM" name="checker.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/strings/internal/str_format/checker.h"/>
+          <FILE id="VV4Abd" name="escaping.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/strings/internal/escaping.cc"/>
+          <FILE id="ElKQtG" name="escaping.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/strings/escaping.cc"/>
+          <FILE id="aWn4Z4" name="escaping.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/strings/internal/escaping.h"/>
+          <FILE id="SKIGxk" name="escaping.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/strings/escaping.h"/>
+          <FILE id="CVvvTW" name="extension.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/strings/internal/str_format/extension.cc"/>
+          <FILE id="PWQg92" name="extension.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/strings/internal/str_format/extension.h"/>
+          <FILE id="CtOoIt" name="float_conversion.cc" compile="1" resource="0"
+                file="sfizz/external/abseil-cpp/absl/strings/internal/str_format/float_conversion.cc"/>
+          <FILE id="xnb7C4" name="float_conversion.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/strings/internal/str_format/float_conversion.h"/>
+          <FILE id="Tg5c5D" name="match.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/strings/match.cc"/>
+          <FILE id="e0lKH2" name="match.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/strings/match.h"/>
+          <FILE id="V1Scal" name="memutil.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/strings/internal/memutil.cc"/>
+          <FILE id="TVifHh" name="memutil.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/strings/internal/memutil.h"/>
+          <FILE id="xNkSg5" name="numbers.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/strings/numbers.cc"/>
+          <FILE id="C1j0no" name="numbers.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/strings/numbers.h"/>
+          <FILE id="hLJXHQ" name="ostringstream.cc" compile="1" resource="0"
+                file="sfizz/external/abseil-cpp/absl/strings/internal/ostringstream.cc"/>
+          <FILE id="oJ1KV1" name="ostringstream.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/strings/internal/ostringstream.h"/>
+          <FILE id="d4Q85Z" name="output.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/strings/internal/str_format/output.cc"/>
+          <FILE id="Yy0cGt" name="output.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/strings/internal/str_format/output.h"/>
+          <FILE id="bWP6vL" name="parser.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/strings/internal/str_format/parser.cc"/>
+          <FILE id="PEsq9p" name="parser.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/strings/internal/str_format/parser.h"/>
+          <FILE id="t8pQnY" name="pow10_helper.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/strings/internal/pow10_helper.cc"/>
+          <FILE id="DnXIkf" name="pow10_helper.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/strings/internal/pow10_helper.h"/>
+          <FILE id="q6ONJt" name="pow10_helper_test.cc" compile="1" resource="0"
+                file="sfizz/external/abseil-cpp/absl/strings/internal/pow10_helper_test.cc"/>
+          <FILE id="Ldp3uj" name="resize_uninitialized.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/strings/internal/resize_uninitialized.h"/>
+          <FILE id="lzu2eo" name="resize_uninitialized_test.cc" compile="1" resource="0"
+                file="sfizz/external/abseil-cpp/absl/strings/internal/resize_uninitialized_test.cc"/>
+          <FILE id="u4r489" name="stl_type_traits.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/strings/internal/stl_type_traits.h"/>
+          <FILE id="F5oDQh" name="str_cat.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/strings/str_cat.cc"/>
+          <FILE id="FRIxNR" name="str_cat.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/strings/str_cat.h"/>
+          <FILE id="AmnFHb" name="str_format.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/strings/str_format.h"/>
+          <FILE id="z7ZSAz" name="str_join.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/strings/str_join.h"/>
+          <FILE id="SqIiLK" name="str_join_internal.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/strings/internal/str_join_internal.h"/>
+          <FILE id="KBodtb" name="str_replace.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/strings/str_replace.cc"/>
+          <FILE id="r0c4jo" name="str_replace.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/strings/str_replace.h"/>
+          <FILE id="fpUJoz" name="str_split.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/strings/str_split.cc"/>
+          <FILE id="IJ725L" name="str_split.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/strings/str_split.h"/>
+          <FILE id="QS5tDM" name="str_split_internal.h" compile="0" resource="0"
+                file="sfizz/external/abseil-cpp/absl/strings/internal/str_split_internal.h"/>
+          <FILE id="ro6mMj" name="string_view.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/strings/string_view.cc"/>
+          <FILE id="H27oPE" name="string_view.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/strings/string_view.h"/>
+          <FILE id="w2RExY" name="strip.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/strings/strip.h"/>
+          <FILE id="nP5bjz" name="substitute.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/strings/substitute.cc"/>
+          <FILE id="NOjLxW" name="substitute.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/strings/substitute.h"/>
+          <FILE id="sPxyn4" name="utf8.cc" compile="1" resource="0" file="sfizz/external/abseil-cpp/absl/strings/internal/utf8.cc"/>
+          <FILE id="CTA2Oq" name="utf8.h" compile="0" resource="0" file="sfizz/external/abseil-cpp/absl/strings/internal/utf8.h"/>
+        </GROUP>
+      </GROUP>
+      <GROUP id="{BE917B7B-4D44-6CFA-48C5-75076375CD05}" name="pugixml">
+        <FILE id="igrOMy" name="pugixml.cpp" compile="1" resource="0" file="sfizz/src/external/pugixml/src/pugixml.cpp"/>
+      </GROUP>
+      <FILE id="nk5Ml6" name="AudioSpan.h" compile="0" resource="0" file="sfizz/src/sfizz/AudioSpan.h"/>
+      <FILE id="cujsky" name="Buffer.h" compile="0" resource="0" file="sfizz/src/sfizz/Buffer.h"/>
+      <FILE id="DY0Cvx" name="CCMap.h" compile="0" resource="0" file="sfizz/src/sfizz/CCMap.h"/>
+      <FILE id="BQ0671" name="Config.h" compile="0" resource="0" file="sfizz/src/sfizz/Config.h"/>
+      <FILE id="X7Yy37" name="Debug.h" compile="0" resource="0" file="sfizz/src/sfizz/Debug.h"/>
+      <FILE id="wWYbTe" name="Defaults.h" compile="0" resource="0" file="sfizz/src/sfizz/Defaults.h"/>
+      <FILE id="E7g6U7" name="EGDescription.h" compile="0" resource="0" file="sfizz/src/sfizz/EGDescription.h"/>
+      <FILE id="JecguF" name="EQDescription.h" compile="0" resource="0" file="sfizz/src/sfizz/EQDescription.h"/>
+      <FILE id="xZ4Qxw" name="EQPool.cpp" compile="1" resource="0" file="sfizz/src/sfizz/EQPool.cpp"/>
+      <FILE id="t5nc74" name="EQPool.h" compile="0" resource="0" file="sfizz/src/sfizz/EQPool.h"/>
+      <FILE id="EbNg2H" name="EventEnvelopes.cpp" compile="1" resource="0"
+            file="sfizz/src/sfizz/EventEnvelopes.cpp"/>
+      <FILE id="k8QxVm" name="EventEnvelopes.h" compile="0" resource="0"
+            file="sfizz/src/sfizz/EventEnvelopes.h"/>
+      <FILE id="xMXMOQ" name="FilePool.cpp" compile="1" resource="0" file="sfizz/src/sfizz/FilePool.cpp"/>
+      <FILE id="WekglQ" name="FilePool.h" compile="0" resource="0" file="sfizz/src/sfizz/FilePool.h"/>
+      <FILE id="AzNBP2" name="FilterDescription.h" compile="0" resource="0"
+            file="sfizz/src/sfizz/FilterDescription.h"/>
+      <FILE id="n0dwcA" name="FilterPool.cpp" compile="1" resource="0" file="sfizz/src/sfizz/FilterPool.cpp"/>
+      <FILE id="I3eijY" name="FilterPool.h" compile="0" resource="0" file="sfizz/src/sfizz/FilterPool.h"/>
+      <FILE id="M4WhHY" name="FloatEnvelopes.cpp" compile="1" resource="0"
+            file="sfizz/src/sfizz/FloatEnvelopes.cpp"/>
+      <FILE id="kjngdZ" name="HistoricalBuffer.h" compile="0" resource="0"
+            file="sfizz/src/sfizz/HistoricalBuffer.h"/>
+      <FILE id="eGyIGK" name="LeakDetector.h" compile="0" resource="0" file="sfizz/src/sfizz/LeakDetector.h"/>
+      <FILE id="BpSkBX" name="Logger.cpp" compile="1" resource="0" file="sfizz/src/sfizz/Logger.cpp"/>
+      <FILE id="xxLvn2" name="Logger.h" compile="0" resource="0" file="sfizz/src/sfizz/Logger.h"/>
+      <FILE id="dKsL4R" name="MathHelpers.h" compile="0" resource="0" file="sfizz/src/sfizz/MathHelpers.h"/>
+      <FILE id="dhyJqg" name="MidiState.cpp" compile="1" resource="0" file="sfizz/src/sfizz/MidiState.cpp"/>
+      <FILE id="ZhEib1" name="MidiState.h" compile="0" resource="0" file="sfizz/src/sfizz/MidiState.h"/>
+      <FILE id="oicTJd" name="OnePoleFilter.h" compile="0" resource="0" file="sfizz/src/sfizz/OnePoleFilter.h"/>
+      <FILE id="oeUMJn" name="Opcode.cpp" compile="1" resource="0" file="sfizz/src/sfizz/Opcode.cpp"/>
+      <FILE id="p2kQlO" name="Opcode.h" compile="0" resource="0" file="sfizz/src/sfizz/Opcode.h"/>
+      <FILE id="CZgfoR" name="Oversampler.cpp" compile="1" resource="0" file="sfizz/src/sfizz/Oversampler.cpp"/>
+      <FILE id="jlQD8W" name="Oversampler.h" compile="0" resource="0" file="sfizz/src/sfizz/Oversampler.h"/>
+      <FILE id="TDhhXn" name="Parser.cpp" compile="1" resource="0" file="sfizz/src/sfizz/Parser.cpp"/>
+      <FILE id="H9eijr" name="Parser.h" compile="0" resource="0" file="sfizz/src/sfizz/Parser.h"/>
+      <FILE id="d4b37o" name="Range.h" compile="0" resource="0" file="sfizz/src/sfizz/Range.h"/>
+      <FILE id="jei2pu" name="Region.cpp" compile="1" resource="0" file="sfizz/src/sfizz/Region.cpp"/>
+      <FILE id="CfaSsa" name="Region.h" compile="0" resource="0" file="sfizz/src/sfizz/Region.h"/>
+      <FILE id="wfECZ2" name="Resources.h" compile="0" resource="0" file="sfizz/src/sfizz/Resources.h"/>
+      <FILE id="ES0PpC" name="ScopedFTZ.cpp" compile="1" resource="0" file="sfizz/src/sfizz/ScopedFTZ.cpp"/>
+      <FILE id="liUvff" name="ScopedFTZ.h" compile="0" resource="0" file="sfizz/src/sfizz/ScopedFTZ.h"/>
+      <FILE id="pdPG0T" name="sfizz.cpp" compile="1" resource="0" file="sfizz/src/sfizz/sfizz.cpp"/>
+      <FILE id="seZ1Wq" name="sfizz_wrapper.cpp" compile="1" resource="0"
+            file="sfizz/src/sfizz/sfizz_wrapper.cpp"/>
+      <FILE id="VqyhoL" name="SfzFilter.cpp" compile="1" resource="0" file="sfizz/src/sfizz/SfzFilter.cpp"/>
+      <FILE id="dnz7Mt" name="SfzFilter.h" compile="0" resource="0" file="sfizz/src/sfizz/SfzFilter.h"/>
+      <FILE id="Z7Sl6e" name="SfzFilterImpls.cxx" compile="1" resource="0"
+            file="sfizz/src/sfizz/SfzFilterImpls.cxx"/>
+      <FILE id="rfOHBN" name="SfzHelpers.cpp" compile="1" resource="0" file="sfizz/src/sfizz/SfzHelpers.cpp"/>
+      <FILE id="Rt6RHU" name="SfzHelpers.h" compile="0" resource="0" file="sfizz/src/sfizz/SfzHelpers.h"/>
+      <FILE id="FFaHke" name="SIMDConfig.h" compile="0" resource="0" file="sfizz/src/sfizz/SIMDConfig.h"/>
+      <FILE id="AgQBe3" name="SIMDDummy.cpp" compile="1" resource="0" file="sfizz/src/sfizz/SIMDDummy.cpp"/>
+      <FILE id="R5Ibsu" name="SIMDHelpers.h" compile="0" resource="0" file="sfizz/src/sfizz/SIMDHelpers.h"/>
+      <FILE id="yNFSHV" name="SIMDNEON.cpp" compile="1" resource="0" file="sfizz/src/sfizz/SIMDNEON.cpp"/>
+      <FILE id="J3h5Fa" name="SIMDSSE.cpp" compile="1" resource="0" file="sfizz/src/sfizz/SIMDSSE.cpp"/>
+      <FILE id="RHlo14" name="StringViewHelpers.h" compile="0" resource="0"
+            file="sfizz/src/sfizz/StringViewHelpers.h"/>
+      <FILE id="CENnzw" name="Synth.cpp" compile="1" resource="0" file="sfizz/src/sfizz/Synth.cpp"/>
+      <FILE id="UqclL6" name="Synth.h" compile="0" resource="0" file="sfizz/src/sfizz/Synth.h"/>
+      <FILE id="rMA1sv" name="Voice.cpp" compile="1" resource="0" file="sfizz/src/sfizz/Voice.cpp"/>
+      <FILE id="grAUxz" name="Voice.h" compile="0" resource="0" file="sfizz/src/sfizz/Voice.h"/>
+      <FILE id="hWnxyc" name="PluginProcessor.cpp" compile="1" resource="0"
+            file="Source/PluginProcessor.cpp"/>
+      <FILE id="UJUSn8" name="PluginProcessor.h" compile="0" resource="0"
+            file="Source/PluginProcessor.h"/>
+      <FILE id="o0VwmU" name="PluginEditor.cpp" compile="1" resource="0"
+            file="Source/PluginEditor.cpp"/>
+      <FILE id="xO1sO0" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
+      <FILE id="xOytm4" name="sfizz.h" compile="0" resource="0" file="sfizz/src/sfizz.h"/>
+      <FILE id="Q76nDS" name="sfizz.hpp" compile="0" resource="0" file="sfizz/src/sfizz.hpp"/>
+    </GROUP>
+  </MAINGROUP>
+  <EXPORTFORMATS>
+    <XCODE_MAC targetFolder="Builds/MacOSX">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug"/>
+        <CONFIGURATION isDebug="0" name="Release"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_opengl" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+      </MODULEPATHS>
+    </XCODE_MAC>
+    <VS2019 targetFolder="Builds/VisualStudio2019">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug"/>
+        <CONFIGURATION isDebug="0" name="Release"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_opengl" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+      </MODULEPATHS>
+    </VS2019>
+    <LINUX_MAKE targetFolder="Builds/LinuxMakefile" linuxExtraPkgConfig="sndfile">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug" headerPath="../../../sfizz/external/abseil-cpp&#10;../../../sfizz/src/external&#10;../../../sfizz/src/external/pugixml/src&#10;"/>
+        <CONFIGURATION isDebug="0" name="Release" headerPath="../../../sfizz/external/abseil-cpp&#10;../../../sfizz/src/external&#10;../../../sfizz/src/external/pugixml/src&#10;"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_opengl" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+      </MODULEPATHS>
+    </LINUX_MAKE>
+    <ANDROIDSTUDIO targetFolder="Builds/Android">
+      <CONFIGURATIONS>
+        <CONFIGURATION isDebug="1" name="Debug"/>
+        <CONFIGURATION isDebug="0" name="Release"/>
+      </CONFIGURATIONS>
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_opengl" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+      </MODULEPATHS>
+    </ANDROIDSTUDIO>
+    <CLION targetFolder="Builds/CLion">
+      <MODULEPATHS>
+        <MODULEPATH id="juce_audio_basics" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_devices" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_formats" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_plugin_client" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_processors" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_audio_utils" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_core" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_cryptography" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_data_structures" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_events" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_graphics" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_basics" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_gui_extra" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+        <MODULEPATH id="juce_opengl" path="../../../home/atsushi/SDKs/JUCE/modules"/>
+      </MODULEPATHS>
+    </CLION>
+  </EXPORTFORMATS>
+  <MODULES>
+    <MODULE id="juce_audio_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_devices" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_formats" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_plugin_client" showAllCode="1" useLocalCopy="0"
+            useGlobalPath="1"/>
+    <MODULE id="juce_audio_processors" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_audio_utils" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_core" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_cryptography" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_data_structures" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_events" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_graphics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_basics" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_gui_extra" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+    <MODULE id="juce_opengl" showAllCode="1" useLocalCopy="0" useGlobalPath="1"/>
+  </MODULES>
+  <LIVE_SETTINGS>
+    <LINUX/>
+  </LIVE_SETTINGS>
+  <JUCEOPTIONS JUCE_VST3_CAN_REPLACE_VST2="0" JUCE_STRICT_REFCOUNTEDPOINTER="1"/>
+</JUCERPROJECT>
